@@ -14,9 +14,9 @@ public class Library {
 
     }
 
-    public void borrowBook (user User, String title)throws Exception {
+    public void borrowBook (User user, String title)throws Exception {
         if(availableToBorrow(title)){
-            User.addBook(bookList.get(indexBookByTitle(title)));
+            user.addBook(bookList.get(indexBookByTitle(title)));
             bookList.get(indexBookByTitle(title)).setStatus(false);
         }
         else{
@@ -77,7 +77,7 @@ public class Library {
     }
 
 
-    public void addUser(user User){
+    public void addUser(User User){
         userList.add(User);
     }
 

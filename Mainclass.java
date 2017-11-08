@@ -9,7 +9,7 @@ public class Mainclass {
             SEM.addUser(Majed);
             SEM.addUser(Mohammad);
             Book booknew  = new Book("love","Majed","documentary","Dar","10A");
-            SEM.addBook(Booknew);
+            SEM.addBook(booknew);
             SEM.searchBook("love");
             SEM.borrowBook(Majed, "love");
             System.out.println(Majed.getBorrowedBooks());
@@ -19,13 +19,13 @@ public class Mainclass {
             System.out.println(" wrong entry");
         }
         Book booktwo = new Book ("java", "fransico", "eductaion","javafirst","19B");
-        SEM.addBook(Booktwo);
+        SEM.addBook(booktwo);
         System.out.println(SEM.getBookList());
         SEM.sortBooks();
         System.out.println(SEM.getBookList());
 
 
-
+    }
 
 
 
@@ -34,4 +34,4 @@ public class Mainclass {
 
 
     }
-}
+

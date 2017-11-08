@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 
 public class User extends Person {
-    private ArrayList<book> borrowedBooks;
+    private ArrayList<Book> borrowedBooks;
 
     public User (String name, String DOB, String address, String ID) throws Exception{
         super(name,DOB,address,ID);
