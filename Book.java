@@ -32,9 +32,9 @@ public class Book implements Comparable<Book> {
         return surname;
     }
     
-    }
+    
     public String getAuthor(){
-        return firstName + " " + surname'
+        return firstName + " " + surname;
     }
 
     public String getShelf() {

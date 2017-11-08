@@ -8,7 +8,7 @@ public class Mainclass {
             User Mohammad = new User("Mohammd","1994/08/01","blid","101");
             SEM.addUser(Majed);
             SEM.addUser(Mohammad);
-            Book booknew  = new Book("love","Majed","documentary","Dar","10A");
+            Book booknew  = new Book("love","Majed" ,"surname" ,"documentary","Dar","10A");
             SEM.addBook(booknew);
             SEM.searchBook("love");
             SEM.borrowBook(Majed, "love");
@@ -18,7 +18,7 @@ public class Mainclass {
         catch (Exception e){
             System.out.println(" wrong entry");
         }
-        Book booktwo = new Book ("java", "fransico", "eductaion","javafirst","19B");
+        Book booktwo = new Book ("java", "fransico", "secondname" ,"eductaion","javafirst","19B");
         SEM.addBook(booktwo);
         System.out.println(SEM.getBookList());
         SEM.sortBooks();
