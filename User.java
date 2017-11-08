@@ -23,9 +23,5 @@ public class User extends Person {
     public String toString() {
         return super.getName();
     }
-    public  void printAllUserBooks(){
-        for(Book item: borrowedBooks){
-            item.toString();
-        }
-    }
+   
 }
