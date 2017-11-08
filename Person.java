@@ -1,4 +1,4 @@
-public abstract class person {
+public abstract class Person {
     private String name;
     private String DOB;
     private String address;
@@ -6,7 +6,7 @@ public abstract class person {
 
 
 
-    public person(){
+    public Person(){
         this.name = "user Name";
         this.ID = " user ID";
         this.address ="user Address";
@@ -14,7 +14,7 @@ public abstract class person {
     }
 
 
-    public person(String name, String DOB, String adress, String ID) throws Exception {
+    public Person(String name, String DOB, String adress, String ID) throws Exception {
         if(name.equals("")){
             throw new Exception(" An empty name, pleas Enter a valid name");
         }
