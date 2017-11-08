@@ -3,6 +3,7 @@ public class Book implements Comparable<Book> {
 
     private String title;
     private String author;
+    private String surname;
     private String genre;
     private String publisher;
     private String shelf;
@@ -12,9 +13,10 @@ public class Book implements Comparable<Book> {
 
 
 
-    public Book (String title, String author, String genre, String publisher,String shelf) {
+    public Book (String title, String author, String surname, String genre, String publisher,String shelf) {
         this.title = title;
         this.author = author;
+        this.surname = surname;
         this.genre = genre;
         this.publisher = publisher;
         this.shelf = shelf;
@@ -24,6 +26,10 @@ public class Book implements Comparable<Book> {
 
     public String getAuthor() {
         return author;
+    }
+    
+    public String getSurname(){
+        return surname;
     }
 
     public String getShelf() {
@@ -58,6 +64,10 @@ public class Book implements Comparable<Book> {
 
     public void setAuthor(String author) {
         this.author = author;
+    }
+    
+    public void setSurname(String surname){
+        this.surname = surname;
     }
 
     public void setGenre(String genre) {
