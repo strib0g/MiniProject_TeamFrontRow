@@ -1,21 +1,21 @@
 import java.util.ArrayList;
 
-public class user extends person {
+public class User extends Person {
     private ArrayList<book> borrowedBooks;
 
-    public user (String name, String DOB, String address, String ID) throws Exception{
+    public User (String name, String DOB, String address, String ID) throws Exception{
         super(name,DOB,address,ID);
         this.borrowedBooks = new ArrayList<>();
 
     }
 
-    public ArrayList<book> getBorrowedBooks() {
+    public ArrayList<Book> getBorrowedBooks() {
         return borrowedBooks;
     }
-    public void addBook(book borrowedBook){
+    public void addBook(Book borrowedBook){
         borrowedBooks.add(borrowedBook);
     }
-    public  void removeBook(book returnedBook){
+    public  void removeBook(Book returnedBook){
         borrowedBooks.remove(returnedBook);
     }
 
@@ -24,7 +24,7 @@ public class user extends person {
         return super.getName();
     }
     public  void printAllUserBooks(){
-        for(book item: borrowedBooks){
+        for(Book item: borrowedBooks){
             item.toString();
         }
     }

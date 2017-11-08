@@ -1,5 +1,5 @@
 
-public class book implements Comparable<book> {
+public class Book implements Comparable<Book> {
 
     private String title;
     private String author;
@@ -12,7 +12,7 @@ public class book implements Comparable<book> {
 
 
 
-    public book (String title, String author, String genre, String publisher,String shelf) {
+    public Book (String title, String author, String genre, String publisher,String shelf) {
         this.title = title;
         this.author = author;
         this.genre = genre;
@@ -47,7 +47,7 @@ public class book implements Comparable<book> {
     }
 
     @Override
-    public int compareTo(book comparedBook) {
+    public int compareTo(Book comparedBook) {
         return this.getTitle().compareTo(comparedBook.getTitle());
     }
 

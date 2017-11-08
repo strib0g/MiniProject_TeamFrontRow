@@ -4,12 +4,12 @@ import java.util.Collections;
 
 public class Library {
 
-    private ArrayList<book> bookList;
-    private ArrayList<user> userList;
+    private ArrayList<Book> bookList;
+    private ArrayList<User> userList;
 
     public Library(){
-        this.bookList  = new ArrayList<book>();
-        this.userList = new ArrayList<user>();
+        this.bookList  = new ArrayList<Book>();
+        this.userList = new ArrayList<User>();
 
 
     }
@@ -27,12 +27,12 @@ public class Library {
     }
 
 
-    public void addBook (book Book){
-        bookList.add(Book);
+    public void addBook (Book book){
+        bookList.add(book);
     }
 
-    public void removeBook( book Book){
-        bookList.remove(Book);
+    public void removeBook( Book book){
+        bookList.remove(book);
     }
 
     public void sortBooks(){
@@ -42,7 +42,7 @@ public class Library {
     public boolean searchBook(String title){
         boolean status = false;
 
-        for( book item : bookList){
+        for( Book item : bookList){
             if(item.getTitle().equals(title)){
                 status = true;
             }
@@ -52,7 +52,7 @@ public class Library {
     }
 
     public boolean availableToBorrow (String title){
-        for(book item : bookList){
+        for(Book item : bookList){
             if(searchBook(title)&& item.isStatus()){
                 return true;
             }
@@ -81,7 +81,7 @@ public class Library {
         userList.add(User);
     }
 
-    public ArrayList<book> getBookList() {
+    public ArrayList<Book> getBookList() {
         return bookList;
     }
 }
