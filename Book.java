@@ -7,7 +7,8 @@ public class Book implements Comparable<Book> {
     private String genre;
     private String publisher;
     private String shelf;
-    private boolean status;
+    private boolean status; // ok 
+
 
 
 
