@@ -24,8 +24,7 @@ public class Library {
 
         }
 
-    }
-
+    } // how long should the book be borrowed?
 
     public void addBook (Book book){
         bookList.add(book);
@@ -80,11 +79,7 @@ public class Library {
         userList.add(User);
     }
 
-    public ArrayList<Book> getBookList() {
-        return bookList;
-    }
-
-    public String getReturnDate(String title){
+    public String findReturnDate(String title){
         Book loanedBook;
         loanedBook = bookList.get(indexBookByTitle(title));
         if(loanedBook.getReturnDate.equals("")){
@@ -93,5 +88,11 @@ public class Library {
         else {
             return loanedBook.getReturnDate;
         }
+    } //D. Maybe add one where you input the book?
+
+    public ArrayList<Book> getBookList() {
+        return bookList;
     }
+
+
 }

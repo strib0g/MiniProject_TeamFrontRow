@@ -23,7 +23,6 @@ public abstract class Person {
             this.DOB = DOB;
             this.address = adress;
             this.ID = ID;
-
         }
 
 
@@ -44,8 +43,5 @@ public abstract class Person {
     public String getID() {
         return ID;
     }
-
-
-
 
 }
