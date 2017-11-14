@@ -6,6 +6,7 @@ public class Library {
 
     private ArrayList<Book> bookList;
     private ArrayList<User> userList;
+    private double loanTime; // Standard amount of time that a book is borrowed.
 
     public Library(){
         this.bookList  = new ArrayList<Book>();
@@ -80,15 +81,17 @@ public class Library {
     }
 
     public String findReturnDate(String title){
-        Book loanedBook;
-        loanedBook = bookList.get(indexBookByTitle(title));
-        if(loanedBook.getReturnDate.equals("")){
-            return "ERROR: Return date could not be found."
+        if(!availableToBorrow()){
+            return "ERROR: Book not found."
+        }
+        Book loanedBook = bookList.get(indexBookByTitle(title));
+        if(loanedBook.isStatus)){
+            return "ERROR: Book has not been borrowed."
         }
         else {
-            return loanedBook.getReturnDate;
+            return ("Day: " + loanedBook.getReturnDay + " Month: " + loanedBook.getReturnMonth + " Year: " + loanedBook.getReturnYear + ".")
         }
-    } //D. Maybe add one where you input the book?
+    } //D. Probably going to be changed.
 
     public ArrayList<Book> getBookList() {
         return bookList;
