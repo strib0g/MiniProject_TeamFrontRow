@@ -76,12 +76,22 @@ public class Library {
         return  index;
     }
 
-
     public void addUser(User User){
         userList.add(User);
     }
 
     public ArrayList<Book> getBookList() {
         return bookList;
+    }
+
+    public String getReturnDate(String title){
+        Book loanedBook;
+        loanedBook = bookList.get(indexBookByTitle(title));
+        if(loanedBook.getReturnDate.equals("")){
+            return "ERROR: Return date could not be found."
+        }
+        else {
+            return loanedBook.getReturnDate;
+        }
     }
 }

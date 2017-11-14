@@ -7,6 +7,7 @@ public class Book implements Comparable<Book> {
     private String genre;
     private String publisher;
     private String shelf;
+    private String returnDate;
     private boolean status;
 
 
@@ -20,6 +21,7 @@ public class Book implements Comparable<Book> {
         this.genre = genre;
         this.publisher = publisher;
         this.shelf = shelf;
+        this.returnDate = "";
         this.status = true;
 
     }
@@ -51,6 +53,10 @@ public class Book implements Comparable<Book> {
 
     public String getTitle() {
         return title;
+    }
+
+    public String getReturnDate(){
+        return returnDate;
     }
 
     public boolean isStatus() {
@@ -89,6 +95,10 @@ public class Book implements Comparable<Book> {
 
     public void setStatus(boolean status) {
         this.status = status;
+    }
+
+    public void setReturnDate(String returnDate){
+        this.returnDate = returnDate;
     }
 
     @Override
