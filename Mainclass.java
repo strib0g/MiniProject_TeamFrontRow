@@ -21,7 +21,7 @@ public class Mainclass {
         Book booktwo = new Book ("java", "fransico", "secondname" ,"eductaion","javafirst","19B");
         SEM.addBook(booktwo);
         System.out.println(SEM.getBookList());
-        SEM.sortBooks();
+        SEM.sortBooksTitle();
         System.out.println(SEM.getBookList());
 
 

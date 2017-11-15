@@ -35,8 +35,12 @@ public class Library {
         bookList.remove(book);
     }
 
-    public void sortBooks(){
+    public void sortBooksTitle(){
         Collections.sort(bookList);
+    }
+    
+    public void sortBooksTitleReverse() {
+    		Collections.sort(bookList, Collections.reverseOrder());
     }
 
     public boolean searchBook(String title){
