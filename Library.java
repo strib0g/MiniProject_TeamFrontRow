@@ -93,6 +93,17 @@ public class Library {
         }
     } //D. Probably going to be changed.
 
+    public ArrayList borrowHistory(String id){
+        User user;
+        for(int i = 0; i< userList.size; i++){
+            if(id.equals(userList.get(i).getID){
+                user = userList.get(i);
+                break;
+            }
+        }
+       return user.getBorrowedBooks()
+    }
+
     public ArrayList<Book> getBookList() {
         return bookList;
     }
