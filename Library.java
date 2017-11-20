@@ -19,6 +19,7 @@ public class Library {
         if(availableToBorrow(title)){
             user.addBook(bookList.get(indexBookByTitle(title)));
             bookList.get(indexBookByTitle(title)).setStatus(false);
+            bookList.get(indexBookByTitle(title)).calcReturnDate();
         }
         else{
             throw  new Exception(" the book is borrowed ");
@@ -82,16 +83,16 @@ public class Library {
 
     public String findReturnDate(String title){
         if(!availableToBorrow()){
-            return "ERROR: Book not found."
+            return "ERROR: Book not available."
         }
         Book loanedBook = bookList.get(indexBookByTitle(title));
         if(loanedBook.isStatus)){
             return "ERROR: Book has not been borrowed."
         }
         else {
-            return ("Day: " + loanedBook.getReturnDay + " Month: " + loanedBook.getReturnMonth + " Year: " + loanedBook.getReturnYear + ".")
+            return (" Year: " + loanedBook.getReturnDateYear + " \nMonth: " + loanedBook.getReturnDateMonth + " \nDay: " + loanedBook.getReturnDateDay + ".")
         }
-    } //D. Probably going to be changed.
+    } //D.
 
     public ArrayList borrowHistory(String id){
         User user;
